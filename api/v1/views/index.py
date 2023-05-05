@@ -4,8 +4,10 @@
 
 from api.v1.views import app_views
 
+
 @app_views.route('/status')
 def statusroute():
-    string = '{"status": "ok"}'
-    return (string)
+    """defining the function"""
+    string = {"status": "ok"}
+    return jsonify(string)
 

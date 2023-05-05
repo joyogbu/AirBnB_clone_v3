@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" teating the Api"""
+"""testing the Api"""
 
 
 from flask import Flask
@@ -13,8 +13,9 @@ app.register_blueprint(app_views)
 
 @app.teardown_appcontext
 def close(exc):
-    """defining the function """
+    """defining the function"""
     storage.close()
 
 if __name__ == "__main__":
+    """run flask app"""
     app.run(host="0.0.0.0", port=5000, threaded=True)
