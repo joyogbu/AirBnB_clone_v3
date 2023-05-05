@@ -77,11 +77,13 @@ class DBStorage:
 
     def get(self, cls, id):
         """returns object based on its ID and class"""
-        objdict = models.storage.all()
-        if objdict.__class__.__name__ == cls and objdict.id == id:
-            return (objdict)
-        else:
-            return(None)
+        if type(cls) is str:
+            cls = classes.get(cls)
+        if cls is None:
+            return None
+        for item in self.__objects.values():
+            if item.__class__ == cls and item.id == id:
+                return item
 
     def count(self, cls=None):
         """count the number of objects in storage matching the given class"""
