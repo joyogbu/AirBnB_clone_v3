@@ -90,4 +90,4 @@ class DBStorage:
         for key in objdict:
             if objdict.__class__.__name__ == cls:
                 count += 1
-        return(count)
+        return (count)
