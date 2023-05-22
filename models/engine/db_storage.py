@@ -79,8 +79,8 @@ class DBStorage:
         """returns object based on its ID and class"""
         if type(cls) is str:
             cls = classes.get(cls)
-        if cls is None:
-            return None
+            if cls is None:
+                return None
         for item in self.__objects.values():
             if item.__class__ == cls and item.id == id:
                 return item
