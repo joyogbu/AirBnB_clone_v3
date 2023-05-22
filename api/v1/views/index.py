@@ -13,4 +13,3 @@ def statusroute():
                "status": "ok"
              }
     return jsonify(string)
-
