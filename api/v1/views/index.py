@@ -22,12 +22,12 @@ def retrieve_number():
     """define thw function"""
     response = {}
     objects = {
-                 "Amenity": "Amenity",
-                 "City": "cities",
-                 "Place": "places",
-                 "Review": "reviews",
-                 "State": "states",
-                 "User": "users"
+                 "Amenity": 'amenities',
+                 "City": 'cities',
+                 "Place": 'places',
+                 "Review": 'reviews',
+                 "State": 'states',
+                 "User": 'users'
                }
     for key, value in objects.items():
         response[value] = storage.count(key)
