@@ -10,6 +10,6 @@ from flask import jsonify
 def statusroute():
     """defining the function"""
     string = {
-               "status": "ok"
+               "status": "OK"
              }
     return jsonify(string)
